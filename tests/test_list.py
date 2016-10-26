@@ -199,3 +199,19 @@ class LinkedListTestCase(unittest.TestCase):
         my_list += LinkedList()
         self.assertEqual(my_list.count(), 0)
         self.assertEqual(my_list, LinkedList())
+        
+    def test_len_of_linked_list(self):
+        my_list = LinkedList([1, 2, 3, 4])
+        self.assertEqual(len(my_list), 4)
+        
+    def test_linked_list_iteration(self):
+        my_list = LinkedList([1, 2, 3, 4])
+        my_iter = iter(my_list)
+        current_elem = next(my_iter)
+        self.assertEqual(current_elem, 1)
+        current_elem = next(my_iter)
+        self.assertEqual(current_elem, 2)
+        current_elem = next(my_iter)
+        self.assertEqual(current_elem, 3)
+        current_elem = next(my_iter)
+        self.assertEqual(current_elem, 4)
